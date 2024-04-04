@@ -1,33 +1,20 @@
 
-months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+x, y, z = input("Fraction: ")
 
-while True:
-    date = input("Date: ").strip()
+x = int(x)
+y = "/"
+z = int(z)
 
-    # 9/8/1636
-    if "/" in date:
-        month, day, year = date.split("/")
+try:
+    fuel = int(x) / int(z) * 100
 
-    # April 2, 1636
-    elif "," in date:
-        month, day, year = date.split()
-
-        if month in months:
-            month = months.index(month)
-            month = month + 1
-            day = day.replace(",","")
+    if fuel == 100:
+        print("F")
+    elif fuel <= 0:
+        print("E")
     else:
-        continue
+        print(f"{fuel:.0f}%")
 
-    try:
-        if int(day) > 31 or int(month) > 12:
-            continue
-        else:
-            break
-    except ValueError:
-        continue
 
-month = int(month)
-day = int(day)
-print(f"{year}-{month:02}-{day:02}")
-
+except (ZeroDivisionError, ValueError):
+    pass
