@@ -41,8 +41,8 @@ Through hands-on problem sets, it explores topics such as:
 
 <p>
 These solutions are shared <b>for learning and reference purposes only</b>.<br>
-If you’re currently taking CS50, make sure to solve the problems on your own before consulting any example code.<br>
-However, please avoid submitting these exact solutions as your own work for CS50.
+Please avoid submitting these exact solutions as your own work for CS50.<br>
+If you’re currently taking CS50, make sure to solve the problems on your own before consulting any example code.
 </p>
 
 <hr>
