@@ -1,12 +1,21 @@
-# Converts emoticons :) and :( to emoji
+# Convert emoticons :) and :( to emoji
 
-# Prompt the user for input
-text = input("TYPE SOMETHING: ")
+def convert(text):
+    # Replace :) with 🙂 and :( with 🙁 in the input text.
+  
+    # Replace happy face 
+    text = text.replace(":)", "🙂")
+    # Replace sad face
+    text = text.replace(":(", "🙁")
+    return text
 
-# Replace :) with 🙂 and :( with 🙁
-text = text.replace(":)", "🙂")
-text = text.replace(":(", "🙁")
+def main():
+    # Prompt the user for input
+    user_input = input("TYPE SOMETHING: ")
+  
+    # Convert emoticons to emoji and print
+    print(convert(user_input))
 
-# Print the result
-print(text)
-
+# Call main when the program runs
+if __name__ == "__main__":
+    main()
